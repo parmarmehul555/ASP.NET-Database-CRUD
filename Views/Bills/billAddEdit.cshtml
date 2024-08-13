@@ -1,0 +1,103 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model web_app_MVC.Models.BillsModel
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fs-3 fw-bold">Bill Add Edit Form</h5>
+
+        <!-- Browser Default Validation -->
+        <form class="row g-3" asp-action="Save">
+            <div class="col-md-4">
+                <input type="hidden" class="form-control" id="validationDefault01" asp-for="BillID">
+                <span class="text-danger" asp-validation-for="BillID"></span>
+            </div>
+            <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">BillNumber</label>
+                <span class="text-danger"> *</span>
+
+                <input type="text" class="form-control" id="validationDefault02" asp-for="BillNumber">
+                <span class="text-danger " asp-validation-for="BillNumber"></span>
+
+
+            </div>
+            <div class="col-md-4">
+                <label for="validationDefaultUsername" class="form-label">BillDate </label>
+                <span class="text-danger"> *</span>
+
+                <input type="text" class="form-control" id="validationDefault02" asp-for="BillDate">
+                <span class="text-danger " asp-validation-for="BillDate"></span>
+
+
+
+               
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault03" class="form-label"> OrderID</label>
+                <span class="text-danger"> *</span>
+
+
+                <select class="form-select" id="validationDefault04" asp-for="OrderID">
+
+
+
+                    <option selected disabled value="">Order ID</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <span class="text-danger " asp-validation-for="OrderID"></span>
+
+            </div>
+            <div class="col-md-3">
+                <label for="validationDefault04" class="form-label">TotalAmount</label>
+                <input type="text" class="form-control" id="validationDefault03" asp-for="TotalAmount">
+
+            </div>
+            <div class="col-md-3">
+                <label for="validationDefault04" class="form-label">Discount</label>
+                <input type="text" class="form-control" id="validationDefault03" asp-for="Discount">
+
+            </div>
+
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-control" type="text" value="" id="invalidCheck2" asp-for="NetAmount" />
+                    <label class="form-check-label" for="invalidCheck2">
+                        NetAmount
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    
+                    <label class="form-check-label" for="invalidCheck2">
+                        User ID
+                    </label>
+                    <span class="text-danger">*</span>
+                    <select class="form-select" id="validationDefault04" asp-for="UserID">
+                        <option selected disabled value="">Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="UserID"></span>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-info" type="submit">Save changes</button>
+                <button class="btn btn-danger">Cancel</button>
+
+            </div>
+        </form>
+        <!-- End Browser Default Validation -->
+
+    </div>
+</div>
+@* @section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+} *@

@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model web_app_MVC.Models.CustomerModel
+<h1 class=" fw-bold card-title fs-3 text-center">Customer Form</h1>
+<form class="row g-3" asp-action="Save">
+   @*  <div class="col-md-6">
+        <label for="inputEmail4"  class="form-label"> CustomerID</label>
+        <input type="hidden" class="form-control" id="inputEmail4" asp-for="CustomerID">
+    </div> *@
+    <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">CustomerName</label>
+        <span class="text-danger"> *</span>
+        <input type="text" class="form-control" id="inputPassword4" asp-for="CustomerName">
+        <span asp-validation-for="CustomerName" class="text-danger"></span>
+    </div>
+    <div class="col-12">
+        <label for="inputAddress" class="form-label">HomeAddress</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" asp-for="HomeAddress">
+    </div>
+    <div class="col-12">
+        <label for="inputAddress2" class="form-label">Email</label>
+        <span class="text-danger"> *</span>
+
+        <input type="email" class="form-control" id="inputAddress2" asp-for="Email">
+        <span asp-validation-for="Email" class="text-danger"></span>
+
+    </div>
+    <div class="col-md-6">
+        <label for="inputCity" class="form-label">MobileNo</label>
+        <span class="text-danger"> *</span>
+
+        <input type="text" class="form-control" id="inputCity" asp-for="MobileNo">
+        <span asp-validation-for="MobileNo" class="text-danger"></span>
+
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">GSTNO</label>
+        <input type="text" class="form-control" id="inputEmail4" asp-for="GSTNO">
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">CityName</label>
+        <input type="text" class="form-control" id="inputEmail4" asp-for="CityName">
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label"> PinCode</label>
+        <input type="text" class="form-control" id="inputEmail4" asp-for="PinCode">
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">NetAmount</label>
+        <span class="text-danger"> *</span>
+
+        <input type="text" class="form-control" id="inputEmail4" asp-for="NetAmount">
+        <span asp-validation-for="NetAmount" class="text-danger"></span>
+
+    </div>
+    <div class="col-md-4">
+        <label for="inputState" class="form-label">UserID</label>
+        <span class="text-danger"> *</span>
+        <select id="inputState" class="form-select" asp-for="UserID">
+            <option selected disabled value="">Choose...</option>
+            <option>1</option>
+            <option>2</option>
+            <option>34</option>
+            <option>21</option>
+            <option>5</option>
+        </select>
+        <span asp-validation-for="UserID" class="text-danger"></span>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-info">Save</button>
+        <button  class="btn btn-danger">Cancel</button>
+
+    </div>
+</form>
+@* @section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+} *@

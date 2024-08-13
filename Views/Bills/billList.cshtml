@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<web_app_MVC.Models.BillsModel>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fs-3 fw-bold text-center">Bills Table</h5>
+        <!-- Active Table -->
+        <table class="table table-striped-columns">
+            <thead>
+                <tr>
+                    <th scope="col" class="bg-warning-subtle">ID</th>
+                    <th scope="col" class="bg-warning-subtle">Number</th>
+                    <th scope="col" class="bg-warning-subtle">Date</th>
+                    <th scope="col" class="bg-warning-subtle">OrderID</th>
+                    <th scope="col" class="bg-warning-subtle">Total Amount</th>
+                    <th scope="col" class="bg-warning-subtle">Discount</th>
+                    <th scope="col" class="bg-warning-subtle">Net Amount</th>
+                    <th scope="col" class="bg-warning-subtle">UserID</th>
+                    <th scope="col" class="bg-warning-subtle">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var bills in Model)
+                {
+                    <tr>
+                        <td>@bills.BillID</td>
+                        <td>@bills.BillNumber</td>
+                        <td>@bills.BillDate</td>
+                        <td>@bills.OrderID</td>
+                        <td>@bills.TotalAmount</td>
+                        <td>@bills.Discount</td>
+                        <td>@bills.NetAmount</td>
+                        <td>@bills.UserID</td>
+                        <td>
+                            <a asp-action="billAddEdit" asp-route-id="@bills.BillID">
+                                <button class="btn btn-warning">Edit</button>
+                            </a>
+                            <button class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table><a asp-action="billAddEdit">
+            <button class="btn btn-primary">Add Bill</button>
+        </a>
+        <!-- End Active Table -->
+    </div>
+</div>

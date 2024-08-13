@@ -1,0 +1,76 @@
+﻿@model web_app_MVC.Models.ProductModel
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fw-bold fs-3 text-center">Product Add Edit Form</h5>
+
+        <!-- Custom Styled Validation -->
+        <form class="row g-3">
+            <div class="col-12">
+                <label for="validationCustom01" class="form-label">Product ID</label>
+                <span class="text-danger">*</span>
+                <input type="hidden" asp-for="ProductID" class="form-control" id="validationCustom01">
+                <span asp-validation-for="ProductID" class="text-danger"></span>
+            </div>
+
+            <div class="col-12">
+                <label for="validationCustom02" class="form-label">Product Name</label>
+                <span class="text-danger">*</span>
+                <input type="text" asp-for="ProductName" class="form-control" id="validationCustom02">
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+
+            <div class="col-12">
+                <label for="validationCustomUsername" class="form-label">Product Price</label>
+                <span class="text-danger">*</span>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">==</span>
+                    <input type="text" asp-for="ProductPrice" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend">
+                    <span asp-validation-for="ProductPrice" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">Product Code</label>
+                <input type="text" asp-for="ProductCode" class="form-control" id="validationCustom03">
+            </div>
+
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Description</label>
+                <span class="text-danger">*</span>
+                <input type="text" asp-for="Description" class="form-control" id="validationCustom04">
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">User ID</label>
+                <span class="text-danger">*</span>
+                <input type="text" asp-for="UserID" class="form-control" id="validationCustom05">
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <span asp-validation-for="UserID" class="text-danger"></span>
+
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-info" type="submit">Submit form</button>
+            </div>
+
+            <div class="col-12">
+                <a asp-action="productList"><button class="btn btn-danger" type="button">Cancel</button></a>
+            </div>
+        </form><!-- End Custom Styled Validation -->
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}

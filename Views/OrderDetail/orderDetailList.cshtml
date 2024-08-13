@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<web_app_MVC.Models.OrderDetailModel>
+
+<div class="row">
+    <div class="col-12">
+
+       
+
+       
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title fw-bold fs-3 text-center">Order Detail Table</h5>
+                <!-- Active Table -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"  class="bg-info-subtle">Order detail id</th>
+                            <th scope="col" class="bg-info-subtle">Order id</th>
+                            <th scope="col" class="bg-info-subtle">Product Id</th>
+                            <th scope="col" class="bg-info-subtle">Quantity</th>
+                            <th scope="col" class="bg-info-subtle">Amount</th>
+                            <th scope="col" class="bg-info-subtle">Total Amount</th>
+                            <th scope="col" class="bg-info-subtle"> user id</th>
+                            <th scope="col" class="bg-info-subtle">Actions</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var orders in Model)
+                        {
+                            <tr>
+                                <td>@orders.OrderDetailID</td>
+                                <td>@orders.OrderID </td>
+                                <td>@orders.ProductID</td>
+                                <td>@orders.Quantity</td>
+                                <td>@orders.Amount</td>
+                                <td>@orders.TotalAmount</td>
+                                <td>@orders.UserID</td>
+                                <td><a asp-action="orderDetailAddEdit"><button class="btn btn-warning">Edit</button></a>
+                                    <button class="btn btn-danger">Delete</button>
+                                    </td>
+
+                            </tr>
+                            
+                        }
+
+                        
+                    </tbody>
+                </table>
+                <a asp-action="orderDetailAddEdit" asp-controller="OrderDetail"> <button class="btn btn-primary">Add order detail</button></a>
+
+                <!-- End Active Table -->
+
+            </div>
+        </div>
+
+        
+    </div>
+</div>

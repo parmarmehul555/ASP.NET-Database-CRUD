@@ -1,0 +1,50 @@
+﻿@model StudentModel
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Student registration Form</h5>
+
+
+
+
+
+
+        <!-- Vertical Form -->
+        <form class="row g-3">
+            <div class="col-12">
+                <label for="inputNanme4" asp-for="StudentName" class="form-label required">Student Name</label>
+                <input type="text" class="form-control" id="inputNanme4">
+                <span asp-validation-for="StudentName" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <label for="inputEmail4" class="form-label">Enrollment Number</label>
+                <input type="text" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-12">
+                <label for="inputPassword4" class="form-label required">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Email institute</label>
+                <input type="email" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Contact</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </form><!-- Vertical Form -->
+
+    </div>
+</div>
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}

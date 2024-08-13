@@ -1,0 +1,88 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model web_app_MVC.Models.OrderDetailModel
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fs-3 fw-bold ">Order Detail Add Edit</h5>
+
+        <!-- No Labels Form -->
+        <form class="row g-3">
+            <div class="col-md-12">
+                <input type="hidden" class="form-control" placeholder="Order Detail ID" asp-for="OrderDetailID">
+            </div>
+            <div class="col-md-6">
+                <label for="orderID" class="form-label">Order ID</label>
+                <span class="text-danger">*</span>
+                <select id="orderID" class="form-select" asp-for="OrderID">
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <span asp-validation-for="OrderID" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label for="productID" class="form-label">Product ID</label>
+                <span class="text-danger">*</span>
+                <select id="productID" class="form-select" asp-for="ProductID">
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <span asp-validation-for="ProductID" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <label for="quantity" class="form-label">Quantity</label>
+                <span class="text-danger">*</span>
+                <input type="text" class="form-control" id="quantity" placeholder="Quantity" asp-for="Quantity">
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label for="amount" class="form-label">Amount</label>
+                <span class="text-danger">*</span>
+                <input type="text" class="form-control" id="amount" placeholder="Amount" asp-for="Amount">
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label for="totalAmount" class="form-label">Total Amount</label>
+                <span class="text-danger">*</span>
+                <input type="text" class="form-control" id="totalAmount" placeholder="Total Amount" asp-for="TotalAmount">
+                <span asp-validation-for="TotalAmount" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label for="userID" class="form-label">UserID</label>
+                <span class="text-danger">*</span>
+                <select id="userID" class="form-select" asp-for="UserID">
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>34</option>
+                    <option>21</option>
+                    <option>5</option>
+                </select>
+                <span asp-validation-for="UserID" class="text-danger"></span>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-info">Save</button>
+                <button type="button" class="btn btn-danger" onclick="window.location.href='@Url.Action("Index", "OrderDetail")'">Cancel</button>
+            </div>
+        </form>
+        <!-- End No Labels Form -->
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}

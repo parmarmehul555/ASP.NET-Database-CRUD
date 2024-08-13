@@ -1,0 +1,75 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model web_app_MVC.Models.UserModel
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fs-3 fw-bold text-center">User Add Edit Form</h5>
+
+        <!-- Vertical Form -->
+        <form class="row g-3" asp-action="Save">
+            <div class="col-12">
+                <input type="hidden" class="form-control" id="inputNanme4" asp-for="UserID" >
+            </div>
+            <div class="col-12">
+                <label for="inputNanme4" class="form-label">UserName</label>
+                <span class="text-danger">*</span>
+
+                <input type="text" class="form-control" id="inputNanme4" asp-for="UserName">
+                <span class="text-danger" asp-validation-for="UserName"></span>
+            </div>
+            <div class="col-12">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <span class="text-danger">*</span>
+
+                <input type="email" class="form-control" id="inputEmail4" asp-for="Email">
+                <span class="text-danger" asp-validation-for="Email"></span>
+
+            </div>
+            <div class="col-12">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <span class="text-danger">*</span>
+
+                <input type="password" class="form-control" id="inputPassword4" asp-for="Password">
+                <span class="text-danger" asp-validation-for="Password"></span>
+
+            </div>
+            <div class="col-12">
+                <label for="inputNanme4" class="form-label">MobileNo</label>
+                <span class="text-danger">*</span>
+
+                <input type="text" class="form-control" id="inputNanme4" asp-for="MobileNo">
+                <span class="text-danger" asp-validation-for="MobileNo"></span>
+
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <span class="text-danger">*</span>
+
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" asp-for="Address">
+                <span class="text-danger" asp-validation-for="Address"></span>
+
+            </div>
+            <div class="col-12">
+                <labe for="inputNanme4" class="form-label">IsActive</label>
+                    <span class="text-danger">*</span>
+
+                    <input type="text" class="form-control" id="inputNanme4" asp-for="IsActive">
+                    <span class="text-danger" asp-validation-for="IsActive"></span>
+
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-info">Save changes</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+            </div>
+        </form><!-- Vertical Form -->
+
+    </div>
+</div>
+@* @section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+} *@

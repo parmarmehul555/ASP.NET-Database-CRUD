@@ -1,0 +1,68 @@
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\bin\Debug\net8.0\appsettings.Development.json
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\bin\Debug\net8.0\appsettings.json
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.staticwebassets.runtime.json
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.exe
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.deps.json
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.runtimeconfig.json
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.dll
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.pdb
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.GeneratedMSBuildEditorConfig.editorconfig
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.AssemblyInfoInputs.cache
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.AssemblyInfo.cs
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.csproj.CoreCompileInputs.cache
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.MvcApplicationPartsAssemblyInfo.cache
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.RazorAssemblyInfo.cache
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.RazorAssemblyInfo.cs
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets.build.json
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets.development.json
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets\msbuild.web_app_MVC.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets\msbuild.build.web_app_MVC.props
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.web_app_MVC.props
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.web_app_MVC.props
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets.pack.json
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\scopedcss\bundle\web_app_MVC.styles.css
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\scopedcss\projectbundle\web_app_MVC.bundle.scp.css
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.dll
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\refint\web_app_MVC.dll
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.pdb
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.genruntimeconfig.cache
+E:\Sem-5\.Net\.Net lab\web_app_MVC\web_app_MVC\obj\Debug\net8.0\ref\web_app_MVC.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\appsettings.Development.json
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\appsettings.json
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.staticwebassets.runtime.json
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.exe
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.deps.json
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.runtimeconfig.json
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\web_app_MVC.pdb
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.GeneratedMSBuildEditorConfig.editorconfig
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.AssemblyInfoInputs.cache
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.AssemblyInfo.cs
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.csproj.CoreCompileInputs.cache
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.MvcApplicationPartsAssemblyInfo.cache
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.RazorAssemblyInfo.cache
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.RazorAssemblyInfo.cs
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets.build.json
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets.development.json
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets\msbuild.web_app_MVC.Microsoft.AspNetCore.StaticWebAssets.props
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets\msbuild.build.web_app_MVC.props
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.web_app_MVC.props
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.web_app_MVC.props
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\staticwebassets.pack.json
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\scopedcss\bundle\web_app_MVC.styles.css
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\scopedcss\projectbundle\web_app_MVC.bundle.scp.css
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\refint\web_app_MVC.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.pdb
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.genruntimeconfig.cache
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\ref\web_app_MVC.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\System.Data.SqlClient.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.csproj.AssemblyReference.cache
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_.BBE871D7.Up2Date

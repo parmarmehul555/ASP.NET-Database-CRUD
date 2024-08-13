@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@* @model List<web_app_MVC.Models.UserModel> *@
+@using System.Data;
+@model System.Data.DataTable;
+<h1 class="fw-bold card-title fs-3 text-center">User table</h1>
+<table class="table table-striped-columns">
+    <thead>
+        <tr>
+            <th>
+                <b>I</b>d
+            </th>
+            <th>user name</th>
+            <th>mobile no.</th>
+            <th data-type="date" data-format="YYYY/DD/MM">Email</th>
+            <th>Address</th>
+            <th>IsActive </th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(DataRow user in Model.Rows)
+        {
+            <tr>
+
+                <td>@user["UserID"]</td>
+                <td>@user["UserName"]</td>
+                <td>@user["Email"]</td>
+                <td>@user["MobileNo"]</td>
+                <td>@user["Address"]</td>
+                <td>@user["IsActive"]</td>
+                <td><a asp-action="userAddEdit">
+                    <button class="btn btn-warning">Edit</button>
+                    </a>
+                    <a class="btn btn-danger" asp-controller="User" asp-action="UserDelete" asp-route-UserID="@user["UserID"]">Delete</a>
+                 </td>
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+<a asp-action="userAddEdit" asp-controller="User"><button class="btn btn-primary">Add User</button></a>

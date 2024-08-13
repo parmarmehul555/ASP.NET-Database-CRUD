@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+  @* @model List<web_app_MVC.Models.OrderModel> *@
+ @using System.Data;
+ @model System.Data.DataTable;
+
+        <div class="card">
+            <div class="card-body"> 
+                <h5 class="card-title fw-bold fs-3 text-center">Order Table</h5>
+
+                <!-- Default Table -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                     <th class="bg-info-subtle" scope="col">Order id</th>
+                    <th class="bg-info-subtle" scope="col">Order date</th>
+                    <th class="bg-info-subtle" scope="col">Customer ID </th>
+                    <th class="bg-info-subtle" scope="col">Payment Mode</th>
+                    <th class="bg-info-subtle" scope="col">Total Amount</th>
+                    <th class="bg-info-subtle" scope="col">Shipping Address </th>
+                    <th class="bg-info-subtle" scope="col">User ID </th>
+                    <th class="bg-info-subtle" scope="col">Actions</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (DataRow order in Model.Rows)
+                        {
+                            <tr>
+                                <td>@order["OrderID"]</td>
+                                <td>@order["OrderDate"] </td>
+                                <td>@order["CustomerID"]</td>
+                                <td>@order["PaymentMode"]</td>
+                                <td>@order["TotalAmount"]</td>
+                                <td>@order["ShippingAddress"] </td>
+                                <td>@order["UserID"]</td>
+                                <td><a asp-action="orderAddEdit"><button class="btn btn-warning">Edit</button></a>
+                                    <button class="btn btn-danger">Delete</button>
+                                    </td>
+
+                            </tr>
+
+                        }
+
+                    </tbody>
+                </table>
+        <a asp-action="orderAddEdit" asp-controller="Order"><button class="btn btn-primary">Add order details</button></a>
+
+                <!-- End Default Table Example -->
+            </div>
+        </div>
+    
+
