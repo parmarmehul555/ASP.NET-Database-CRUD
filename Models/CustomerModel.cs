@@ -24,4 +24,10 @@ namespace web_app_MVC.Models
         public int UserID { get; set; }
 
     }
+
+    public class CustomerDropdown
+    {
+        public int CustomerID { get; set; }
+        public string CustomerName { get; set; }
+    }
 }

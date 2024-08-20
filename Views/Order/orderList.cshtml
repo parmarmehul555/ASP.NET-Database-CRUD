@@ -11,6 +11,15 @@
             <div class="card-body"> 
                 <h5 class="card-title fw-bold fs-3 text-center">Order Table</h5>
 
+        @{
+            if (TempData["Message"] != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @TempData["Message"]
+                </div>
+            }
+        }
+
                 <!-- Default Table -->
                 <table class="table">
                     <thead>
@@ -38,7 +47,12 @@
                                 <td>@order["ShippingAddress"] </td>
                                 <td>@order["UserID"]</td>
                                 <td><a asp-action="orderAddEdit"><button class="btn btn-warning">Edit</button></a>
-                                    <button class="btn btn-danger">Delete</button>
+                                    <a 
+                                        class="btn btn-danger"
+                               asp-action="OrderDelete"
+                                        asp-controller="Order"
+                                        asp-route-OrderID = "@order["OrderID"]"
+                                    >Delete</a>
                                     </td>
 
                             </tr>

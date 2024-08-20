@@ -66,3 +66,4 @@ F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\runtimes\unix\li
 F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.csproj.AssemblyReference.cache
 F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_.BBE871D7.Up2Date
+F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\obj\Debug\net8.0\web_app_MVC.sourcelink.json

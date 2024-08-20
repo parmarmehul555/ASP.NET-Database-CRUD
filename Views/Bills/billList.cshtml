@@ -3,10 +3,21 @@
 *@
 @{
 }
-@model List<web_app_MVC.Models.BillsModel>
+@* @model List<web_app_MVC.Models.BillsModel> *@
+@using System.Data;
+@model System.Data.DataTable;
+
 <div class="card">
     <div class="card-body">
         <h5 class="card-title fs-3 fw-bold text-center">Bills Table</h5>
+        @{
+            if (TempData["Message"] != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @TempData["Message"]
+                </div>
+            }
+        }
         <!-- Active Table -->
         <table class="table table-striped-columns">
             <thead>
@@ -23,22 +34,26 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var bills in Model)
+                @foreach (DataRow bills in Model.Rows)
                 {
                     <tr>
-                        <td>@bills.BillID</td>
-                        <td>@bills.BillNumber</td>
-                        <td>@bills.BillDate</td>
-                        <td>@bills.OrderID</td>
-                        <td>@bills.TotalAmount</td>
-                        <td>@bills.Discount</td>
-                        <td>@bills.NetAmount</td>
-                        <td>@bills.UserID</td>
+                        <td>@bills["BillID"]</td>
+                        <td>@bills["BillNumber"]</td>
+                        <td>@bills["BillDate"]</td>
+                        <td>@bills["OrderID"]</td>
+                        <td>@bills["TotalAmount"]</td>
+                        <td>@bills["Discount"]</td>
+                        <td>@bills["NetAmount"]</td>
+                        <td>@bills["UserID"]</td>
                         <td>
-                            <a asp-action="billAddEdit" asp-route-id="@bills.BillID">
+                            <a asp-action="billAddEdit" asp-route-id="@bills["BillID"]">
                                 <button class="btn btn-warning">Edit</button>
                             </a>
-                            <button class="btn btn-danger">Delete</button>
+                            <a 
+                                class="btn btn-danger"
+                               asp-action="BillDelete"
+                               asp-controller="Bills"
+                               asp-route-BillID="@bills["BillID"]">Delete</a>
                         </td>
                     </tr>
                 }

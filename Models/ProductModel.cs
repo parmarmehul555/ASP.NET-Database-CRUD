@@ -17,4 +17,16 @@ namespace web_app_MVC.Models
 
         public int UserID { get; set; } 
     }
+
+    public class UserDropdownModel
+    {
+        public int UserID { get; set; }
+        public String UserName { get; set; }
+    }
+
+    public class ProductDropdownModel
+    {
+        public int ProductID { get; set; }
+        public string ProductName { get; set; }
+    }
 }

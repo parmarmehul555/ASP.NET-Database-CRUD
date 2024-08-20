@@ -29,15 +29,22 @@ namespace web_app_MVC.Controllers
 
         public IActionResult UserDelete(int UserID)
         {
-            String str = _configuration.GetConnectionString("MyConnectionString");
-            SqlConnection connection = new SqlConnection(str);
-            connection.Open();
-            SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "PR_User_Delete";
-            cmd.Parameters.AddWithValue("UserID",UserID);
-            cmd.ExecuteNonQuery();
-            connection.Close();
+            try
+            {
+                String str = _configuration.GetConnectionString("MyConnectionString");
+                SqlConnection connection = new SqlConnection(str);
+                connection.Open();
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "PR_User_Delete";
+                cmd.Parameters.AddWithValue("UserID", UserID);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                TempData["Message"] = "Foreign key conflict error accured!";
+            }
             return RedirectToAction("userList");
         }
         public IActionResult userAddEdit()

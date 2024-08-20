@@ -3,7 +3,14 @@
 @using System.Data;
 @model System.Data.DataTable;
 <h1 class="fw-bold card-title fs-3 text-center">Product table</h1>
-
+@{
+    if (TempData["Message"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["Message"]
+        </div>
+    }
+}
     <table class="table table-striped-columns">
      <thead>
     <th>Product id</th>
@@ -24,7 +31,11 @@
                 <td>@product["Description"]</td>
                 <td>@product["UserID"]</td>
                 <td><a asp-action="productAddEdit"><button class="btn btn-warning">Edit</button>
-                    <button class="btn btn-danger">Delete</button>
+                    <a 
+                        class="btn btn-danger"
+                        asp-controller="Product"
+                        asp-action="productDelete"
+                           asp-route-productID="@product["ProductID"]">Delete</a>
                     </a>
                     </td>
 

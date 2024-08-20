@@ -25,17 +25,62 @@ namespace web_app_MVC.Models
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
             SqlConnection connection = new SqlConnection(connstr);
-            SqlCommand cmd = new SqlCommand();
+            SqlCommand cmd = connection.CreateCommand();
             connection.Open();
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.CommandText = "PR_Cus_SelectAll";
+            cmd.CommandText = "PR_Customer_SelectAll";
             SqlDataReader reader = cmd.ExecuteReader();
             DataTable customer = new DataTable();
             customer.Load(reader);
             return View(customer);
         }
+
+        public IActionResult CustomerDelete(int CustomerID)
+        {
+            try
+            {
+                String conn = _configuration.GetConnectionString("MyConnectionString");
+                SqlConnection connection = new SqlConnection(conn);
+                SqlCommand cmd = connection.CreateCommand();
+                connection.Open();
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandText = "PR_Customer_Delete";
+                cmd.Parameters.AddWithValue("CustomerID", CustomerID);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }catch(Exception ex)
+            {
+                TempData["Message"] = ex.Message;
+            }
+            return RedirectToAction("customerList");
+        }
+
+        public List<UserDropdownModel> GetUserDropdowns()
+        {
+            String connstr = _configuration.GetConnectionString("MyConnectionString");
+            SqlConnection connection = new SqlConnection(connstr);
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "PR_User_Dropdown";
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(reader);
+            List<UserDropdownModel> userList = new List<UserDropdownModel>();
+            foreach(DataRow user in table.Rows)
+            {
+                UserDropdownModel userr = new UserDropdownModel();
+                userr.UserID = Convert.ToInt32(user["UserID"]);
+                userr.UserName = user["UserName"].ToString();
+                userList.Add(userr);
+            }
+            connection.Close();
+            return userList;
+        }
         public IActionResult customerAddEdit()
         {
+            List<UserDropdownModel> userDropdown = GetUserDropdowns();
+            ViewBag.userDropdown = userDropdown;
             return View();
         }
     }

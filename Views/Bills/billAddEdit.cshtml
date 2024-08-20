@@ -39,14 +39,9 @@
                 <span class="text-danger"> *</span>
 
 
-                <select class="form-select" id="validationDefault04" asp-for="OrderID">
+                <select class="form-select" id="validationDefault04" asp-for="OrderID" asp-items="@(new SelectList(ViewBag.orderDropdown,"OrderID","ShippingAddress"))">
 
-
-
-                    <option selected disabled value="">Order ID</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
+                    <option selected disabled value="">Select Address</option>
                 </select>
                 <span class="text-danger " asp-validation-for="OrderID"></span>
 
@@ -77,11 +72,8 @@
                         User ID
                     </label>
                     <span class="text-danger">*</span>
-                    <select class="form-select" id="validationDefault04" asp-for="UserID">
+                    <select id="inputState" class="form-select" asp-for="UserID" asp-items="@(new SelectList(ViewBag.userDropdown,"UserID","UserName"))">
                         <option selected disabled value="">Choose...</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
                     </select>
                     <span class="text-danger" asp-validation-for="UserID"></span>
                 </div>

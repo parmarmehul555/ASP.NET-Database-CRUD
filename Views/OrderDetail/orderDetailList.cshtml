@@ -3,17 +3,24 @@
 *@
 @{
 }
-@model List<web_app_MVC.Models.OrderDetailModel>
+@* @model List<web_app_MVC.Models.OrderDetailModel> *@
+
+@using System.Data;
+@model System.Data.DataTable;
 
 <div class="row">
-    <div class="col-12">
-
-       
-
-       
+    <div class="col-12
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title fw-bold fs-3 text-center">Order Detail Table</h5>
+            @{
+                if (TempData["Message"] != null)
+                {
+                <div class="alert alert-danger" role="alert">
+                        @TempData["Message"]
+                </div>
+                }
+            }
                 <!-- Active Table -->
                 <table class="table">
                     <thead>
@@ -30,18 +37,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach(var orders in Model)
+                        @foreach(DataRow orders in Model.Rows)
                         {
                             <tr>
-                                <td>@orders.OrderDetailID</td>
-                                <td>@orders.OrderID </td>
-                                <td>@orders.ProductID</td>
-                                <td>@orders.Quantity</td>
-                                <td>@orders.Amount</td>
-                                <td>@orders.TotalAmount</td>
-                                <td>@orders.UserID</td>
+                                <td>@orders["OrderDetailID"]</td>
+                                <td>@orders["OrderID"]</td>
+                                <td>@orders["ProductID"]</td>
+                                <td>@orders["Quantity"]</td>
+                                <td>@orders["Amount"]</td>
+                                <td>@orders["TotalAmount"]</td>
+                                <td>@orders["UserID"]</td>
                                 <td><a asp-action="orderDetailAddEdit"><button class="btn btn-warning">Edit</button></a>
-                                    <button class="btn btn-danger">Delete</button>
+                                                    <a class="btn btn-danger"asp-action="OrderDetailDelete" asp-controller="OrderDetail" asp-route-OrderDetailsID="@orders["OrderDetailID"]">Delete</a>
                                     </td>
 
                             </tr>

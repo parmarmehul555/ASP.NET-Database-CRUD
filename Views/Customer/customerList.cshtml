@@ -8,6 +8,14 @@
 @using System.Data;
 @model System.Data.DataTable;
 <h1 class="fw-bold card-title fs-3 text-center">Customer Table</h1>
+@{
+    if (TempData["Message"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["Message"]
+        </div>
+    }
+}
 <table class="table table-striped-columns">
     <thead>
         <tr>
@@ -34,7 +42,7 @@
                 <td>@customer["CustomerName"]</td>
                 <td>@customer["HomeAddress"]</td>
                 <td>@customer["Email"]</td>
-                <td>@customer["MobileNo "]</td>
+                <td>@customer["MobileNo"]</td>
                 <td>@customer["GSTNO"]</td>
                 <td>@customer["CityName"]</td>
                 <td>@customer["PinCode"]</td>
@@ -45,7 +53,11 @@
                         <button class="btn btn-warning">Edit</button>
                     </a>
 
-                   <button class="btn btn-danger">Delete</button>
+                   <a 
+                       class="btn btn-danger"
+                       asp-action="CustomerDelete"
+                       asp-controller="Customer"
+                       asp-route-CustomerID="@customer["CustomerID"]">Delete</a>
                     
                     </td>
 

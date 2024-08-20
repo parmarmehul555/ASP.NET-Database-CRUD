@@ -45,16 +45,11 @@
             <div class="col-md-3">
                 <label for="validationCustom05" class="form-label">User ID</label>
                 <span class="text-danger">*</span>
-                <input type="text" asp-for="UserID" class="form-control" id="validationCustom05">
-                <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                 @* <input type="text" asp-for="UserID" class="form-control" id="validationCustom05"> *@
+                <select asp-for="UserID" asp-items="@(new SelectList(ViewBag.userDropdown,"UserID","UserName"))" class="form-control" id="validationCustome05">
+                    <option>Select User</option>
                 </select>
                 <span asp-validation-for="UserID" class="text-danger"></span>
-
             </div>
 
             <div class="col-12">

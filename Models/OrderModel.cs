@@ -21,4 +21,10 @@ namespace web_app_MVC.Models
         public int UserID { get; set; }
        
     }
+
+    public class OrderDropdown
+    {
+        public int OrderID { get; set; }
+        public string ShippingAddress { get; set; }
+    }
 }
