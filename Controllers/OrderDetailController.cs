@@ -26,8 +26,8 @@ namespace web_app_MVC.Controllers
             orderDetails.Load(reader);
             return View(orderDetails);
         }
-
-        public IActionResult OrderDetailDelete(int OrderDetailsID)
+        [HttpDelete]
+        public IActionResult OrderDetailDelete(int OrderDetailID)
         {
             try
             {
@@ -37,15 +37,16 @@ namespace web_app_MVC.Controllers
                 SqlCommand cmd = connection.CreateCommand();
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.CommandText = "PR_OrderDetail_Delete";
-                cmd.Parameters.AddWithValue("OrderDetailID", OrderDetailsID);
+                cmd.Parameters.AddWithValue("OrderDetailID", OrderDetailID);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 TempData["Message"] = "Foreign key conflit error occured!";
             }
             return RedirectToAction("orderDetailList");
-        }
+       }
 
         public List<UserDropdownModel> GetUserDropdowns()
         {
@@ -115,7 +116,35 @@ namespace web_app_MVC.Controllers
             connection.Close();
             return productList;
         }
-        public IActionResult orderDetailAddEdit()
+
+        public IActionResult Save(OrderDetailModel modelOrderDetail)
+        {
+            String connstr = _configuration.GetConnectionString("MyConnectionString");
+            SqlConnection connection = new SqlConnection(connstr);
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            if (modelOrderDetail.OrderDetailID == null)
+            {
+                cmd.CommandText = "PR_OrderDetail_Insert";
+            }
+            else
+            {
+                cmd.CommandText = "PR_OrderDetail_Update";
+                cmd.Parameters.AddWithValue("OrderDetailID", modelOrderDetail.OrderDetailID);
+            }
+            cmd.Parameters.AddWithValue("OrderID", modelOrderDetail.OrderID);
+            cmd.Parameters.AddWithValue("ProductID", modelOrderDetail.ProductID);
+            cmd.Parameters.AddWithValue("Quantity", modelOrderDetail.Quantity);
+            cmd.Parameters.AddWithValue("Amount", modelOrderDetail.Amount);
+            cmd.Parameters.AddWithValue("TotalAmount", modelOrderDetail.TotalAmount);
+            cmd.Parameters.AddWithValue("UserID", modelOrderDetail.UserID);
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(reader);
+            return RedirectToAction("orderDetailList");
+        }
+        public IActionResult orderDetailAddEdit(int? OrderDetailID)
         {
             List<UserDropdownModel> userDropdown = GetUserDropdowns();
             ViewBag.userDropdown = userDropdown;
@@ -125,6 +154,32 @@ namespace web_app_MVC.Controllers
 
             List<ProductDropdownModel> productDropdown = GetProductDropdowns();
             ViewBag.productDropdown = productDropdown;
+
+            if(OrderDetailID != null)
+            {
+                String str = this._configuration.GetConnectionString("MyConnectionString");
+                SqlConnection connection = new SqlConnection(str);
+                connection.Open();
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandText = "PR_OrderDetail_SelectByID";
+                cmd.Parameters.AddWithValue("OrderDetailID", OrderDetailID)
+;                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable orderDetail = new DataTable();
+                orderDetail.Load(reader);
+                OrderDetailModel orm = new OrderDetailModel();
+                foreach(DataRow row in orderDetail.Rows)
+                {
+                    orm.OrderDetailID = Convert.ToInt32(row["OrderDetailID"]);
+                    orm.OrderID = Convert.ToInt32(row["OrderID"]);
+                    orm.ProductID = Convert.ToInt32(row["ProductID"]);
+                    orm.Quantity = Convert.ToInt32(row["Quantity"]);
+                    orm.Amount= Convert.ToInt32(row["Amount"]);
+                    orm.TotalAmount = Convert.ToInt32(row["TotalAmount"]);
+                    orm.UserID = Convert.ToInt32(row["UserID"]);
+                }
+                return View(orm);
+            }
             return View();
         }
     }

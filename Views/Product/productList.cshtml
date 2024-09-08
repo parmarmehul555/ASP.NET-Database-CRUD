@@ -30,7 +30,9 @@
                 <td>@product["ProductCode"]</td>
                 <td>@product["Description"]</td>
                 <td>@product["UserID"]</td>
-                <td><a asp-action="productAddEdit"><button class="btn btn-warning">Edit</button>
+                <td>
+                    <a asp-action="productAddEdit" asp-controller="Product" asp-route-ProductID="@product["ProductID"]">
+                        <button class="btn btn-warning">Edit</button>
                     <a 
                         class="btn btn-danger"
                         asp-controller="Product"

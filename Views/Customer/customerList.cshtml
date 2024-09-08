@@ -49,7 +49,7 @@
                 <td>@customer["NetAmount"]</td>
                 <td>@customer["UserID"]</td>
                 <td>
-                    <a asp-action="customerAddEdit">
+                    <a asp-controller="Customer" asp-action="customerAddEdit" asp-route-CustomerID="@customer["CustomerID"]">
                         <button class="btn btn-warning">Edit</button>
                     </a>
 

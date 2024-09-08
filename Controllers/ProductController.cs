@@ -70,10 +70,62 @@ namespace web_app_MVC.Controllers
             ViewBag.userDropdown = userDropdown;
             return userDropdown;
         }
-        public IActionResult productAddEdit()
+
+        [HttpPost]
+        public IActionResult Save(ProductModel modelProduct)
+        {
+            String connstr = _configuration.GetConnectionString("MyConnectionString");
+            SqlConnection connection = new SqlConnection(connstr);
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            if(modelProduct.ProductID == null)
+            {
+                cmd.CommandText = "PR_Product_Insert";
+            }
+            else
+            {
+                cmd.CommandText = "PR_Product_Update";
+                cmd.Parameters.AddWithValue("ProductID", modelProduct.ProductID);
+            }
+            cmd.Parameters.AddWithValue("ProductName", modelProduct.ProductName);
+            cmd.Parameters.AddWithValue("ProductPrice", modelProduct.ProductPrice);
+            cmd.Parameters.AddWithValue("Description", modelProduct.Description);
+            cmd.Parameters.AddWithValue("ProductCode", modelProduct.ProductCode);
+            cmd.Parameters.AddWithValue("UserID", modelProduct.UserID);
+            SqlDataReader reader = cmd.ExecuteReader();
+            dt.Load(reader);
+            return RedirectToAction("productList");
+        }
+        public IActionResult productAddEdit(int? ProductID)
         {
             var userDropdown = GetUserDropdownModels();
             ViewBag.userDropdown = userDropdown;
+            if (ProductID != null)
+            {
+                String connStr = _configuration.GetConnectionString("MyConnectionString");
+                SqlConnection connection = new SqlConnection(connStr);
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "PR_Product_SelectByID";
+                command.Parameters.AddWithValue("ProductID", ProductID);
+                SqlDataReader reader = command.ExecuteReader();
+                DataTable product = new DataTable();
+                product.Load(reader);
+                ProductModel ProductData = new ProductModel();
+                foreach(DataRow dr in product.Rows)
+                {
+                    ProductData.ProductName = dr["ProductName"].ToString();
+                    ProductData.Description = dr["Description"].ToString();
+                    ProductData.ProductCode = dr["ProductCode"].ToString();
+                    ProductData.ProductPrice = Convert.ToInt32(dr["ProductPrice"]);
+                    ProductData.UserID = Convert.ToInt32(dr["UserID"]);
+                }
+                connection.Close();
+                return View(ProductData);
+            }
             return View();
         }
     }

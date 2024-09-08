@@ -46,7 +46,7 @@
                         <td>@bills["NetAmount"]</td>
                         <td>@bills["UserID"]</td>
                         <td>
-                            <a asp-action="billAddEdit" asp-route-id="@bills["BillID"]">
+                            <a asp-controller="Bills" asp-action="billAddEdit" asp-route-BillID="@bills["BillID"]">
                                 <button class="btn btn-warning">Edit</button>
                             </a>
                             <a 

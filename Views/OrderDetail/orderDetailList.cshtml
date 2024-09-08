@@ -16,9 +16,9 @@
             @{
                 if (TempData["Message"] != null)
                 {
-                <div class="alert alert-danger" role="alert">
-                        @TempData["Message"]
-                </div>
+                        <div class="alert alert-danger" role="alert">
+                                @TempData["Message"]
+                        </div>
                 }
             }
                 <!-- Active Table -->
@@ -47,8 +47,8 @@
                                 <td>@orders["Amount"]</td>
                                 <td>@orders["TotalAmount"]</td>
                                 <td>@orders["UserID"]</td>
-                                <td><a asp-action="orderDetailAddEdit"><button class="btn btn-warning">Edit</button></a>
-                                                    <a class="btn btn-danger"asp-action="OrderDetailDelete" asp-controller="OrderDetail" asp-route-OrderDetailsID="@orders["OrderDetailID"]">Delete</a>
+                                    <td><a asp-controller="OrderDetail" asp-action="orderDetailAddEdit" asp-route-OrderDetailID="@orders["OrderDetailID"]"><button class="btn btn-warning">Edit</button></a>
+                                                        <a class="btn btn-danger" onclick="deleteOrderDetail(@orders["OrderDetailID"])">Delete</a>
                                     </td>
 
                             </tr>
@@ -63,8 +63,44 @@
                 <!-- End Active Table -->
 
             </div>
-        </div>
-
-        
+        </div>        
     </div>
 </div>
+
+<script>
+    function deleteOrderDetail(OrderDetailID) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: "/OrderDetail/OrderDetailDelete/" + OrderDetailID,
+                    type: "DELETE",
+                    data: { OrderDetailID: OrderDetailID },
+                    success: function (res) {
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Order Detail deleted successfully!",
+                            icon: "success"
+                        }).then(() => {
+                            window.location.reload();
+                        })
+                    },
+                    error: function (xhr, status, error) {
+                        Swal.fire({
+                            title: "Error!",
+                            text: "Something Went Wrong.",
+                            icon: "error"
+                        });
+                    }
+                })
+            }
+        })
+    }
+</script>

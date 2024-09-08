@@ -10,7 +10,7 @@
         <h5 class="card-title fs-3 fw-bold ">Order Detail Add Edit</h5>
 
         <!-- No Labels Form -->
-        <form class="row g-3">
+        <form class="row g-3" asp-controller="OrderDetail" asp-action="Save" method="post">
             <div class="col-md-12">
                 <input type="hidden" class="form-control" placeholder="Order Detail ID" asp-for="OrderDetailID">
             </div>

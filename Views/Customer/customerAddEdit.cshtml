@@ -5,11 +5,11 @@
 }
 @model web_app_MVC.Models.CustomerModel
 <h1 class=" fw-bold card-title fs-3 text-center">Customer Form</h1>
-<form class="row g-3" asp-action="Save">
-   @*  <div class="col-md-6">
-        <label for="inputEmail4"  class="form-label"> CustomerID</label>
-        <input type="hidden" class="form-control" id="inputEmail4" asp-for="CustomerID">
-    </div> *@
+<form class="row g-3" asp-controller="Customer" asp-action="Save" method="post">
+    <div class="col-md-6">
+         <label for="inputEmail4"  class="form-label"> CustomerID</label>
+         <input type="hidden" class="form-control" id="inputEmail4" asp-for="CustomerID">
+     </div>
     <div class="col-md-6">
         <label for="inputPassword4" class="form-label">CustomerName</label>
         <span class="text-danger"> *</span>

@@ -6,7 +6,7 @@ namespace web_app_MVC.Models
     public class UserModel
     {
      
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
         [Required (ErrorMessage ="User name is required")]
         public string UserName  { get; set; }
         [EmailAddress]

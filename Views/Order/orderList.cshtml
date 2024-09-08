@@ -46,7 +46,8 @@
                                 <td>@order["TotalAmount"]</td>
                                 <td>@order["ShippingAddress"] </td>
                                 <td>@order["UserID"]</td>
-                                <td><a asp-action="orderAddEdit"><button class="btn btn-warning">Edit</button></a>
+                        <td>
+                            <a asp-action="orderAddEdit" asp-controller="Order" asp-route-OrderID="@order["OrderID"]"><button class="btn btn-warning">Edit</button></a>
                                     <a 
                                         class="btn btn-danger"
                                asp-action="OrderDelete"

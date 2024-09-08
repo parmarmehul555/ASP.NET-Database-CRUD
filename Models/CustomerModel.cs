@@ -4,7 +4,7 @@ namespace web_app_MVC.Models
 {
     public class CustomerModel
     {
-        public int CustomerID { get; set; }
+        public int? CustomerID { get; set; }
         [Required(ErrorMessage = "Customer name is not empty")]
 
         public string CustomerName { get; set; }
