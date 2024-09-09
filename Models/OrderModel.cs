@@ -7,7 +7,7 @@ namespace web_app_MVC.Models
     {
       
         public int? OrderID{ get; set; }
-        public string OrderDate { get; set; }
+        public DateTime OrderDate { get; set; }
         [Required(ErrorMessage = "please choose approproate option")]
 
         public int CustomerID { get; set; }

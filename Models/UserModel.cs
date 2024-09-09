@@ -11,7 +11,6 @@ namespace web_app_MVC.Models
         public string UserName  { get; set; }
         [EmailAddress]
         public string Email { get; set; }
-        [PasswordPropertyText]
         public string Password { get; set; }
         [Required]
         [Phone]

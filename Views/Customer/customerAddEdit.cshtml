@@ -19,6 +19,7 @@
     <div class="col-12">
         <label for="inputAddress" class="form-label">HomeAddress</label>
         <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" asp-for="HomeAddress">
+        <span asp-validation-for="HomeAddress" class="text-danger"></span>
     </div>
     <div class="col-12">
         <label for="inputAddress2" class="form-label">Email</label>
@@ -39,14 +40,17 @@
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">GSTNO</label>
         <input type="text" class="form-control" id="inputEmail4" asp-for="GSTNO">
+        <span asp-validation-for="GSTNO" class="text-danger"></span>
     </div>
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">CityName</label>
         <input type="text" class="form-control" id="inputEmail4" asp-for="CityName">
+        <span asp-validation-for="CityName" class="text-danger"></span>
     </div>
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label"> PinCode</label>
         <input type="text" class="form-control" id="inputEmail4" asp-for="PinCode">
+        <span asp-validation-for="PinCode" class="text-danger"></span>
     </div>
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">NetAmount</label>

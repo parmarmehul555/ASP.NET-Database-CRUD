@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\web_app_MVC.csproj": {}
+    "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\web_app_MVC.csproj": {}
   },
   "projects": {
-    "F:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\web_app_MVC.csproj": {
+    "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\web_app_MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\web_app_MVC.csproj",
+        "projectUniqueName": "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\web_app_MVC.csproj",
         "projectName": "web_app_MVC",
-        "projectPath": "F:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\web_app_MVC.csproj",
+        "projectPath": "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\web_app_MVC.csproj",
         "packagesPath": "C:\\Users\\mehul\\.nuget\\packages\\",
-        "outputPath": "F:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\obj\\",
+        "outputPath": "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mehul\\AppData\\Roaming\\NuGet\\NuGet.Config",

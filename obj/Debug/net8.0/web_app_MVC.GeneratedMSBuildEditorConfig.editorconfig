@@ -9,83 +9,83 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = web_app_MVC
 build_property.RootNamespace = web_app_MVC
-build_property.ProjectDir = F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\
+build_property.ProjectDir = E:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC
+build_property.MSBuildProjectDirectory = E:\SEM-5\.net\Programs\web_app_MVC\web_app_MVC
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Bills/billAddEdit.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Bills/billAddEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbHNcYmlsbEFkZEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Bills/billList.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Bills/billList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbHNcYmlsbExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Customer/customerAddEdit.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Customer/customerAddEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcY3VzdG9tZXJBZGRFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Customer/customerList.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Customer/customerList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcY3VzdG9tZXJMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/OrderDetail/orderDetailAddEdit.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/OrderDetail/orderDetailAddEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcb3JkZXJEZXRhaWxBZGRFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/OrderDetail/orderDetailList.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/OrderDetail/orderDetailList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcb3JkZXJEZXRhaWxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Order/orderAddEdit.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Order/orderAddEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcb3JkZXJBZGRFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Order/orderList.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Order/orderList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcb3JkZXJMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Product/productAddEdit.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Product/productAddEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxwcm9kdWN0QWRkRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Product/productList.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Product/productList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxwcm9kdWN0TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Shared/Error.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Student/Index.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/user/userAddEdit.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/user/userAddEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclx1c2VyQWRkRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/user/userList.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/user/userList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclx1c2VyTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/_ViewImports.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/_ViewStart.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Shared/_Layout.cshtml]
+[E:/SEM-5/.net/Programs/web_app_MVC/web_app_MVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-axgjn8v8zq

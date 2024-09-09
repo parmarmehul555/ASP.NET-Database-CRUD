@@ -142,7 +142,7 @@ namespace web_app_MVC.Controllers
                 foreach(DataRow row in table.Rows)
                 {
                     or.OrderID = Convert.ToInt32(row["OrderID"]);
-                    or.OrderDate = row["OrderDate"].ToString();
+                    or.OrderDate = Convert.ToDateTime(row["OrderDate"]);
                     or.CustomerID = Convert.ToInt32(row["CustomerID"]);
                     or.PaymentMode = row["PaymentMode"].ToString();
                     or.TotalAmount = Convert.ToDecimal(row["TotalAmount"]);

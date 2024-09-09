@@ -26,7 +26,6 @@ namespace web_app_MVC.Controllers
             users.Load(reader);
             return View(users);
         }
-        [HttpDelete]
         public IActionResult UserDelete(int UserID)
         {
             try
@@ -83,6 +82,10 @@ namespace web_app_MVC.Controllers
         [HttpPost]
         public IActionResult Save(UserModel user)
         {
+            if(user.Password == null)
+            {
+                ModelState.AddModelError("Password", "Password Field is Required");
+            }
             if (user.UserID == null)
             {
                 if (ModelState.IsValid)

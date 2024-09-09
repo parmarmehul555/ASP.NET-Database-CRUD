@@ -45,7 +45,7 @@
                     <a asp-action="userAddEdit" asp-controller="User" asp-route-UserID="@user["UserID"]">
                         <button class="btn btn-warning">Edit</button>
                     </a>
-                    <a class="btn btn-danger" onclick="deleteUser(@user["UserID"])">Delete</a>
+                    <a class="btn btn-danger" asp-action="UserDelete" asp-controller="User" asp-route-UserID="@user["UserID"]">Delete</a>
                  </td>
 
             </tr>
@@ -55,7 +55,7 @@
     </tbody>
 </table>
 <a asp-action="userAddEdit" asp-controller="User"><button class="btn btn-primary">Add User</button></a>
-<script>
+@* <script>
     function deleteUser(UserID){
         Swal.fire({
             title: "Are you sure?",
@@ -89,4 +89,4 @@
             }
         })
     }
-</script>
+</script> *@

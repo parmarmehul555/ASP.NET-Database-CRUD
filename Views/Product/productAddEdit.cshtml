@@ -33,6 +33,7 @@
             <div class="col-md-6">
                 <label for="validationCustom03" class="form-label">Product Code</label>
                 <input type="text" asp-for="ProductCode" class="form-control" id="validationCustom03">
+                <span asp-validation-for="ProductCode" class="text-danger"></span>
             </div>
 
             <div class="col-md-3">
@@ -42,12 +43,11 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
 
-            <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">User ID</label>
+            <div class="col-md-6">
+                <label for="productID" class="form-label">User ID</label>
                 <span class="text-danger">*</span>
-                 @* <input type="text" asp-for="UserID" class="form-control" id="validationCustom05"> *@
-                <select asp-for="UserID" asp-items="@(new SelectList(ViewBag.userDropdown,"UserID","UserName"))" class="form-control" id="validationCustome05">
-                    <option>Select User</option>
+                <select id="productID" class="form-select" asp-for="UserID" asp-items="@(new SelectList(ViewBag.userDropdown,"UserID","UserName"))">
+                    <option selected disabled value="">Choose...</option>
                 </select>
                 <span asp-validation-for="UserID" class="text-danger"></span>
             </div>
