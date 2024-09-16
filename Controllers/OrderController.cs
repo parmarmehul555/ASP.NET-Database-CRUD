@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 using web_app_MVC.Models;
+using web_app_MVC.Attributes;
 namespace web_app_MVC.Controllers
 {
     public class OrderController : Controller
@@ -12,6 +13,7 @@ namespace web_app_MVC.Controllers
         {
             _configuration = configuration;
         }
+        [CheckAccess]
         public IActionResult orderList()
         {
             String connStr = _configuration.GetConnectionString("MyConnectionString");
@@ -25,7 +27,7 @@ namespace web_app_MVC.Controllers
 			table.Load(reader);
             return View(table);
         }
-
+        [CheckAccess]
         public IActionResult OrderDelete(int OrderID)
         {
             try
@@ -44,7 +46,7 @@ namespace web_app_MVC.Controllers
             }
             return RedirectToAction("orderList");
         }
-
+        [CheckAccess]
         public List<UserDropdownModel> GetUserDropdowns()
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -67,7 +69,7 @@ namespace web_app_MVC.Controllers
             connection.Close();
             return userList;
         }
-
+        [CheckAccess]
         public List<CustomerDropdown> GetCustomerDropdowns()
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -90,7 +92,7 @@ namespace web_app_MVC.Controllers
             connection.Close();
             return customerList;
         }
-
+        [CheckAccess]
         public IActionResult Save(OrderModel moderlOrder)
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -118,6 +120,7 @@ namespace web_app_MVC.Controllers
             table.Load(reader);
             return RedirectToAction("orderList");
         }
+        [CheckAccess]
         public IActionResult orderAddEdit(int? OrderID)
         {
             List<UserDropdownModel> userDropdown = GetUserDropdowns();

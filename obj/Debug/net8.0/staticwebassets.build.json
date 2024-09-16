@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oe15MOI7BTr7MYVNkzIiwp1LmtJSDJuLGBoP+WYU9YM=",
+  "Hash": "5KrnqmnnaSinkmC+XdXeAV3xO413c3DW0IjwjX8uVZg=",
   "Source": "web_app_MVC",
   "BasePath": "_content/web_app_MVC",
   "Mode": "Default",
@@ -112,6 +112,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\card.jpg"
     },
     {
+      "Identity": "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\wwwroot\\assets\\img\\coffee.png",
+      "SourceId": "web_app_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\wwwroot\\",
+      "BasePath": "_content/web_app_MVC",
+      "RelativePath": "assets/img/coffee.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\coffee.png"
+    },
+    {
       "Identity": "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\wwwroot\\assets\\img\\favicon.png",
       "SourceId": "web_app_MVC",
       "SourceType": "Discovered",
@@ -129,25 +148,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\favicon.png"
-    },
-    {
-      "Identity": "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\wwwroot\\assets\\img\\logo.png",
-      "SourceId": "web_app_MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\wwwroot\\",
-      "BasePath": "_content/web_app_MVC",
-      "RelativePath": "assets/img/logo.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\logo.png"
     },
     {
       "Identity": "E:\\SEM-5\\.net\\Programs\\web_app_MVC\\web_app_MVC\\wwwroot\\assets\\img\\messages-1.jpg",

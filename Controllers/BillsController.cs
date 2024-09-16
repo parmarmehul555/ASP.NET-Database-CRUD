@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using web_app_MVC.Models;
+using web_app_MVC.Attributes;
 
 namespace web_app_MVC.Controllers
 {
@@ -14,7 +15,7 @@ namespace web_app_MVC.Controllers
         {
             _configuration = configuration;
         }
-        
+        [CheckAccess]
         public IActionResult billList()
         {
             String str = this._configuration.GetConnectionString("MyConnectionString");
@@ -29,7 +30,7 @@ namespace web_app_MVC.Controllers
             connection.Close();
             return View(table);
         }
-
+        [CheckAccess]
         public IActionResult BillDelete(int BillID)
         {
             try
@@ -50,7 +51,7 @@ namespace web_app_MVC.Controllers
             }
             return RedirectToAction("billList");
         }
-
+        [CheckAccess]
         public List<UserDropdownModel> GetUserDropdowns()
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -73,7 +74,7 @@ namespace web_app_MVC.Controllers
             connection.Close();
             return userList;
         }
-
+        [CheckAccess]
         public List<OrderDropdown> GetOrderDropdowns()
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -96,6 +97,7 @@ namespace web_app_MVC.Controllers
             connection.Close();
             return orderList;
         }
+        [CheckAccess]
         public IActionResult Save(BillsModel billsModel)
         {
             if (ModelState.IsValid)
@@ -132,6 +134,7 @@ namespace web_app_MVC.Controllers
             }
 
         }
+        [CheckAccess]
         public IActionResult billAddEdit(int? BillID)
         {
             List<UserDropdownModel> userDropdown = GetUserDropdowns();

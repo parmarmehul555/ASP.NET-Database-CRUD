@@ -2,6 +2,9 @@
 using System.Data.SqlClient;
 using System.Data;
 using web_app_MVC.Models;
+using web_app_MVC.DAL;
+using web_app_MVC.Attributes;
+
 namespace web_app_MVC.Controllers
 {
     public class userController : Controller
@@ -12,6 +15,8 @@ namespace web_app_MVC.Controllers
         {
             _configuration = configuration;
         }
+        [CheckAccess]
+        #region List Users
         [Route("/")]
         public IActionResult userList()
         {
@@ -26,6 +31,10 @@ namespace web_app_MVC.Controllers
             users.Load(reader);
             return View(users);
         }
+        #endregion
+
+        [CheckAccess]
+        #region Delete User
         public IActionResult UserDelete(int UserID)
         {
             try
@@ -46,6 +55,10 @@ namespace web_app_MVC.Controllers
             }
             return RedirectToAction("userList");
         }
+        #endregion
+
+        [CheckAccess]
+        #region User Add Edit
 
         public IActionResult userAddEdit(int? UserID)
         {
@@ -78,7 +91,10 @@ namespace web_app_MVC.Controllers
             }
             return View();
         }
+        #endregion
 
+        [CheckAccess]
+        #region Save User
         [HttpPost]
         public IActionResult Save(UserModel user)
         {
@@ -133,5 +149,44 @@ namespace web_app_MVC.Controllers
             }
             return View("userAddEdit", user);
         }
+        #endregion
+
+        #region Login Page
+        [Route("login")]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        #endregion
+
+        #region Login User
+        public IActionResult UserLogin(UserLoginModel userLoginModel)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    DB_Connection connection = new DB_Connection();
+                    SqlCommand cmd =  connection.Connect_DB("PR_User_Login", CommandType.StoredProcedure);
+                    cmd.Parameters.AddWithValue("UserName", userLoginModel.UserName);
+                    cmd.Parameters.AddWithValue("Password", userLoginModel.Password);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    DataTable td = new DataTable();
+                   td.Load(reader);
+                    foreach(DataRow row in td.Rows)
+                    {
+                        HttpContext.Session.SetString("UserID", row["UserID"].ToString());
+                        HttpContext.Session.SetString("UserName", row["UserName"].ToString());
+                    }
+                    return RedirectToAction("ProductList", "Product");
+                }
+            }catch(Exception ex)
+            {
+                TempData["LoginErrorMessage"] = ex.Message;
+            }
+            return View("Login");
+        }
+        #endregion
+
     }
 }

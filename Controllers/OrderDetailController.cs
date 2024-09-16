@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using web_app_MVC.Attributes;
 using web_app_MVC.Models;
 
 namespace web_app_MVC.Controllers
@@ -13,6 +14,7 @@ namespace web_app_MVC.Controllers
         {
             _configuration = configuration;
         }
+        [CheckAccess]
         public IActionResult orderDetailList()
         {
             String str = this._configuration.GetConnectionString("MyConnectionString");
@@ -26,6 +28,7 @@ namespace web_app_MVC.Controllers
             orderDetails.Load(reader);
             return View(orderDetails);
         }
+        [CheckAccess]
         [HttpDelete]
         public IActionResult OrderDetailDelete(int OrderDetailID)
         {
@@ -47,7 +50,7 @@ namespace web_app_MVC.Controllers
             }
             return RedirectToAction("orderDetailList");
        }
-
+        [CheckAccess]
         public List<UserDropdownModel> GetUserDropdowns()
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -70,7 +73,7 @@ namespace web_app_MVC.Controllers
             connection.Close();
             return userList;
         }
-
+        [CheckAccess]
         public List<OrderDropdown> GetOrderDropdowns()
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -93,7 +96,7 @@ namespace web_app_MVC.Controllers
             connection.Close();
             return orderList;
         }
-
+        [CheckAccess]
         public List<ProductDropdownModel> GetProductDropdowns()
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -116,7 +119,7 @@ namespace web_app_MVC.Controllers
             connection.Close();
             return productList;
         }
-
+        [CheckAccess]
         public IActionResult Save(OrderDetailModel modelOrderDetail)
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -144,6 +147,7 @@ namespace web_app_MVC.Controllers
             table.Load(reader);
             return RedirectToAction("orderDetailList");
         }
+        [CheckAccess]
         public IActionResult orderDetailAddEdit(int? OrderDetailID)
         {
             List<UserDropdownModel> userDropdown = GetUserDropdowns();

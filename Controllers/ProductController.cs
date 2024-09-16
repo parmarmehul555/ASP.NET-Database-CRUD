@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Data.SqlClient;
+using web_app_MVC.Attributes;
 using web_app_MVC.Models;
 
 namespace web_app_MVC.Controllers
@@ -13,6 +14,7 @@ namespace web_app_MVC.Controllers
         {
             _configuration = configuration;
         }
+        [CheckAccess]
         public IActionResult productList()
         {
             String connStr = _configuration.GetConnectionString("MyConnectionString");
@@ -27,6 +29,7 @@ namespace web_app_MVC.Controllers
             connection.Close();
             return View(products);
         }
+        [CheckAccess]
         public IActionResult productDelete(int productID)
         {
             try
@@ -47,7 +50,7 @@ namespace web_app_MVC.Controllers
             }
             return RedirectToAction("productList");
         }
-
+        [CheckAccess]
         public List<UserDropdownModel> GetUserDropdownModels()
         {
             String connStr = _configuration.GetConnectionString("MyConnectionString");
@@ -70,7 +73,7 @@ namespace web_app_MVC.Controllers
             ViewBag.userDropdown = userDropdown;
             return userDropdown;
         }
-
+        [CheckAccess]
         [HttpPost]
         public IActionResult Save(ProductModel modelProduct)
         {
@@ -98,6 +101,7 @@ namespace web_app_MVC.Controllers
             dt.Load(reader);
             return RedirectToAction("productList");
         }
+        [CheckAccess]
         public IActionResult productAddEdit(int? ProductID)
         {
             var userDropdown = GetUserDropdownModels();

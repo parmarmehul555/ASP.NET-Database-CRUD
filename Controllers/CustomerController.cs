@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Data.SqlClient;
+using web_app_MVC.Attributes;
 
 namespace web_app_MVC.Models
 {
@@ -11,7 +12,8 @@ namespace web_app_MVC.Models
         {
             _configuration = configuration;
         }
-        
+
+        [CheckAccess]
         public IActionResult customerList()
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -25,7 +27,7 @@ namespace web_app_MVC.Models
             customer.Load(reader);
             return View(customer);
         }
-
+        [CheckAccess]
         public IActionResult CustomerDelete(int CustomerID)
         {
             try
@@ -45,7 +47,7 @@ namespace web_app_MVC.Models
             }
             return RedirectToAction("customerList");
         }
-
+        [CheckAccess]
         public List<UserDropdownModel> GetUserDropdowns()
         {
             String connstr = _configuration.GetConnectionString("MyConnectionString");
@@ -69,6 +71,8 @@ namespace web_app_MVC.Models
             return userList;
         }
 
+
+        [CheckAccess]
         [HttpPost]
         public IActionResult Save(CustomerModel modelCustomer)
         {
@@ -100,6 +104,7 @@ namespace web_app_MVC.Models
             dt.Load(reader);
             return RedirectToAction("customerList");
         }
+        [CheckAccess]
         public IActionResult customerAddEdit(int? CustomerID)
         {
             List<UserDropdownModel> userDropdown = GetUserDropdowns();
